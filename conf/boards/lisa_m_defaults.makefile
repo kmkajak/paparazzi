@@ -8,7 +8,7 @@
 #
 RADIO_CONTROL_LED  ?= 4
 BARO_LED           ?= none
-AHRS_ALIGNER_LED   ?= 2
+AHRS_ALIGNER_LED   ?= none
 GPS_LED            ?= 3
 SYS_TIME_LED       ?= 1
 

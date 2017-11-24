@@ -30,6 +30,9 @@ ifneq ($(TOOLCHAIN_FOUND),1)
   endif
 endif
 
+$(Warning: ARM embedded toolchain in Downloads folder in use)
+PREFIX = /home/karl/Downloads/gcc-arm-none-eabi-5_3-2016q1/bin/arm-none-eabi
+
 CC   = $(PREFIX)-gcc
 CXX  = $(PREFIX)-g++
 LD   = $(PREFIX)-g++
@@ -39,6 +42,8 @@ DMP  = $(PREFIX)-objdump
 NM   = $(PREFIX)-nm
 SIZE = $(PREFIX)-size
 GDB  = $(PREFIX)-gdb
+
+$(GDB path is: $GDB)
 
 # some general commands
 RM = rm

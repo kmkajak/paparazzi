@@ -58,15 +58,19 @@
 float care_free_heading = 0;
 
 
+
 static int32_t get_rc_roll(void)
 {
   const int32_t max_rc_phi = (int32_t) ANGLE_BFP_OF_REAL(STABILIZATION_ATTITUDE_SP_MAX_PHI);
   int32_t roll = radio_control.values[RADIO_ROLL];
+  int32_t zero_roll = 0;
 #if STABILIZATION_ATTITUDE_DEADBAND_A
   DeadBand(roll, STABILIZATION_ATTITUDE_DEADBAND_A);
   return roll * max_rc_phi / (MAX_PPRZ - STABILIZATION_ATTITUDE_DEADBAND_A);
+  //return zero_roll;
 #else
   return roll * max_rc_phi / MAX_PPRZ;
+  //return zero_roll;
 #endif
 }
 
