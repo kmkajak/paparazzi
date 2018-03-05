@@ -472,7 +472,7 @@ static inline void adc_init_irq(void)
 static inline void adc_init_single(uint32_t adc, uint8_t nb_channels, uint8_t *channel_map)
 {
   // Paranoia, must be down for 2+ ADC clock cycles before calibration
-  adc_off(adc);
+  adc_power_off(adc);
 
   /* Configure ADC */
   /* Explicitly setting most registers, reset/default values are correct for most */
